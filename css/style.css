@@ -44,3 +44,19 @@ body {
     width: 530px;
     margin-left: auto;
 }
+
+.results {
+    background-color: aliceblue;
+    text-align: center;
+    width: 16pc;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    height: 5pc;
+    border-radius: 20px;
+    font-size: smaller;
+}
+
+.answer {
+    text
+}
