@@ -8,6 +8,8 @@
       {
         "label": "off"
       }
-    ]
+    ],
+    "button-type": "off",
+    "meta-viewport": "off"
   }
 }
