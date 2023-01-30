@@ -1,26 +1,14 @@
-
-let learn = document.getElementById("learn");
-let cross = document.getElementById("cross-platfom");
-let angular = document.getElementById("angular");
-let net = document.getElementById("net");
-let online = document.getElementById("online");
-let inschool = document.getElementById("inschool");
-let gaming = document.getElementById("gaming");
-let web = document.getElementById("web");
-let mcdonald = document.getElementById("Mcdonald");
-let Burger = document.getElementById("Burger");
-
-
-window.onload = function() {
-    const form = document.querySelector ("form");
-    const newLocal = this;
-    form.onsubmit = function(event) {
+window.addEventListener("load", function() {
+    const form = document.getElementById("Test");
+    form.addEventListener("submit", function(event) {
         event.preventDefault();
+
+        const quest1 = document.querySelector("input[type=radio][name=quest1]:checked").value;
+        const quest2 = document.querySelector("input[type=radio][name=quest2]:checked").value;
+        const quest3 = document.querySelector("input[type=radio][name=quest3]:checked").value;
+        const quest4 = document.querySelector("input[type=radio][name=quest4]:checked").value;
+        const quest5 = document.querySelector("input[type=radio][name=quest5]:checked").value;
+
+        if ()
     }
 }
-
-let results = getElementById("results")
-results = setAttribute("class", "hidden")
-
-let answer = getElementById("answer")
-answer = setAttribute("class", "hidden")
