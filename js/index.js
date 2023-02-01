@@ -1,41 +1,33 @@
-window.addEventListener("load", function() {
-    const form = document.getElementById("form");
-    form.addEventListener("submit", function(event) {
+window.onload = function() {
+    let form = document.querySelector("form");
+    form.onsubmit = function(event) {
         event.preventDefault();
 
-        function language() {
+        const learn = document.getElementById("learn").value;
+        const platform = document.getElementById("cross-platform").value;
+        const angular = document.getElementById("angular").value;
+        const net = document.getElementById("net").value;
+        const online = document.getElementById("online").value;
+        const inschool = document.getElementById("inschool").value;
+        const gaming = document.getElementById("gaming").value;
+        const web = document.getElementById("web").value;
+        const mcdonald = document.getElementById("Mcdonald").value;
+        const burger = document.getElementById("Burger").value;
 
-        let language;
-        let learn = document.getElementById("learn");
-        let cross = document.getElementById("cross-platfom");
-        let angular = document.getElementById("angular");
-        let net = document.getElementById("net");
-        let online = document.getElementById("online");
-        let school = document.getElementById("inschool");
-        let gaming = document.getElementById("gaming");
-        let web = document.getElementById("web");
-        let mcdonald = document.getElementById("Mcdonald");
-        let Burger = document.getElementById("Burger");
+        document.querySelector("quest1").innerHTML = lear
+        document.querySelector("quest2").innerHTML = angular
+        document.querySelector("quest3").innerHTML = online
+        document.querySelector("quest4").innerHTML = gaming
+        document.querySelector("quest5").innerHTML = mcdonald
 
-
-        const quest1 = document.querySelector("input[type=radio][name=quest1]:checked").value;
-        const quest2 = document.querySelector("input[type=radio][name=quest2]:checked").value;
-        const quest3 = document.querySelector("input[type=radio][name=quest3]:checked").value;
-        const quest4 = document.querySelector("input[type=radio][name=quest4]:checked").value;
-        const quest5 = document.querySelector("input[type=radio][name=quest5]:checked").value;
-
-        document.getElementById("mybutton").onclick = function(){
         if (quest1 === learn && quest2 === angular && quest3 === online && quest4 === gaming && quest5 === Mcdonald) {
-           language = "javaScript"
+            result = "javaScript"
         } else if (quest1 === cross && quest2 === net && quest3 === school && quest4 === web && quest5 === Burger) {
-            language = "C#"
+            result = "C#"
         } else if (quest1 === learn && quest2 === net && quest3 === online && quest4 === gaming && quest5 === Burger) {
-            language = "Swift"
-        } else if (quest1 === learn && quest2 === angular && quest3 === online && quest4 === web && quest5 === Burger) {
-            language = "javaScript"
-        }
+            result = "Swift"
+        } 
 
-        document.getElementById("result").innerHTML = language;
-    }
+        document.getElementById("output").innerText = result;
     }
 }
