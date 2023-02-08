@@ -1,27 +1,30 @@
-window.onload = function() {
-    let form = document.querySelector("form");
-    form.onsubmit = function(event) {
+window.onload = (function() {
+    const form = document.querySelector("form");
+    form.onsubmit = (function(event) {
         event.preventDefault();
-
-        document.getElementById("mybutton").onclick = function() {
-
-            var quest1 = document.querySelector("input[name='learn']:checked").value;
-            var quest2 = document.querySelector("input[name='angular']:checked").value;
-            var quest3 = document.querySelector("input[name='online']:checked").value;
-            var quest4 = document.querySelector("input[name='gaming']:checked").value;
-            var quest5 = document.querySelector("input[name='Mcdonald']:checked").value;
-
-       
-
-
-        if (quest1 && quest2 && quest3 && quest4 && quest5) {
-            result = "javaScript"
-        } else if (quest1 === cross && quest2 === net && quest3 === school && quest4 === web && quest5 === Burger) {
-            result = "C#"
-        } else if (quest1 === learn && quest2 === net && quest3 === online && quest4 === gaming && quest5 === Burger) {
-            result = "Swift"
-        } 
-    }}
-}
-
-console.log()
+        const feature = document.querySelector("input[type=radio][name='quest1']:checked").value;
+        const framework = document.querySelector("input[type=radio][name='quest2']:checked").value;
+        const Learn = document.querySelector("input[type=radio][name='quest3']:checked").value;
+        const projects = document.querySelector("input[type=radio][name='quest4']:checked").value;
+        const favorit = document.querySelector("input[type=radio][name='quest5']:checked").value;
+        
+        let result;
+        if (feature === "1" && framework === "1" && Learn === "1" && projects === "1" && favorit === "1") {
+            result = "javaScript";
+        } else if (feature === "1" && framework === "1" && Learn === "2" && projects === "1" && favorit === "2") {
+            result = "C#";
+        } else if (feature === "2" && framework === "1" && Learn === "2" && projects === "1" && favorit === "2") {
+            result = "Swift";
+        } else if (feature === "1" && framework === "2" && Learn === "2" && projects === "2" && favorit === "1") {
+            result = "javaScript";
+        } else if (feature === "1" && framework === "2" && Learn === "1" && projects === "2" && favorit === "1") {
+            result = "Swift";
+        } else if (feature === "2" && framework === "1" && Learn === "1" && projects === "1" && favorit === "1") {
+            result = "C#";
+        } else if (feature === "2" && framework === "2" && Learn === "1" && projects === "1" && favorit === "1") {
+            result = "javaScript";
+        }
+        document.getElementById("answer").innerText = result;
+        console.log(results)
+    });
+});
