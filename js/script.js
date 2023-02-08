@@ -23,6 +23,8 @@ window.onload = (function() {
             result = "C#";
         } else if (feature === "2" && framework === "2" && Learn === "1" && projects === "1" && favorit === "1") {
             result = "javaScript";
+        } else {
+            result = "javaScript";
         }
         document.getElementById("answer").innerText = result;
         console.log(results)

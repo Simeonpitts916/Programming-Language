@@ -3,7 +3,7 @@
 simeon pitts
 
 ## Description of application
-here you can find out what program works fo you 
+take this little quiz and see what is best for you.
 
 ## bTechnologies used
 css
